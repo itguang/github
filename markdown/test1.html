@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test1</title>
+
+	<link rel="stylesheet" href="mkcss/editormd.css" />
+	 <link rel="stylesheet" href="mkcss/style.css" />
+	<script src="mkjs/jquery.min.js"></script>
+    <script src="mkjs/editormd.js"></script>
+</head>
+<body>
+<div id="test-editormd">
+    <textarea style="display:none;">###Hello world!</textarea>
+</div>
+
+<script type="text/javascript">
+			var testEditor;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                    path    : "../lib/"
+                });
+                
+                /*
+                // or
+                testEditor = editormd({
+                    id      : "test-editormd",
+                    width   : "90%",
+                    height  : 640,
+                    path    : "../lib/"
+                });
+                */
+            });
+        </script>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+文档的显示
+编辑区的代码格式已经调整成为我们喜欢的样式了，在表单POST提交时，editormd将我们的markdown语法文档翻译成了HTML语言，并将html字符串提交给了我们的后台，后台应该将这些HTML字符串持久化到数据库中，在文章显示时将他们显示在页面上。
+具体的做法是：
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/editormd/css/editormd.preview.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/editormd/css/editormd.css" />
+<!-- 因为我们使用了dark主题，所以在容器div上加上dark的主题类，实现我们自定义的代码样式 -->
+<div class="content editormd-preview-theme-dark" id="content">${article.text }</div>
+<script src="<%=request.getContextPath()%>/resources/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/editormd/lib/marked.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/editormd/lib/prettify.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/editormd/editormd.min.js"></script>
+<script type="text/javascript">
+editormd.markdownToHTML("content");
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,109 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<base href="${basePath}">
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Classic editor replacing a textarea</title>
+
+<script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
+<style type="text/css">
+#titleStyle {
+	text-align: center;
+}
+
+#title {
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-color: black;
+	height: 50px;
+	width: 800px;
+	font-size: 32px;
+	color: #808080;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#outline {
+	resize: none;
+	width: 700px;
+	height: 150px;
+	padding: 20px;
+	font_size: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+</style>
+
+
+
+</head>
+
+<body>
+	
+	<form action="servlet/ResponseServlet" method="post">
+	
+	<div id="titleStyle">
+		<input id="title" name="title" type="text" value="#文章标题#"><br>
+	</div>
+		<textarea cols="80" id="editor1" name="editor" rows="10">
+	</textarea>
+		<table>
+			<tr>
+				<td>简介:</td>
+				<td><textarea name="outline" id="outline" style="">请输入文章概要,帮助别人快速了解,250字左右即可...</textarea>
+				</td>
+				<td><span style="color:red"></span></td>
+			</tr>
+			<tr>
+				<td>分类:</td>
+				<td><input id="" name="category" type="text" value=""
+					style="height:30px;width:300px" easyform="email;real-time;">
+				</td>
+			</tr>
+		</table>
+		<input value="发表文章" type="submit"
+			style="margin-right:20px; margin-top:20px;"> <br> <br>
+		<br> <br> <br> <br>
+	</form>
+
+	<script>
+	//tableresize---表格Resizing
+	//codesnippet---代码段
+	//uploadimage---上传图片
+	//image2---带标题的图片
+	//colorbutton,colordialog ----文字,文字背景
+		var config = {
+			extraPlugins : 'codesnippet,uploadimage,image2,colorbutton,colordialog,tableresize',
+			codeSnippet_theme : 'arta',//自定义主题: https://highlightjs.org/static/demo/
+			height : 356,
+			resize_minHeight: 356,
+			contentsLanguage : 'zh-cn',
+			uiColor : '',
+
+			// Upload images to a CKFinder connector (note that the response type is set to JSON).
+			uploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+
+			filebrowserBrowseUrl : 'http://www.baidu.com',//查看上传图片
+
+			//服务器处理上传图片的地址
+			filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+
+		};
+
+		CKEDITOR.replace('editor1', config);
+	</script>
+</body>
+
+</html>

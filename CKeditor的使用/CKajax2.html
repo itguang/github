@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Creating and destroying CKEditor on the fly</title>
+	<script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
+</head>
+
+<body>
+
+	<script>
+		var editor1, html = '';
+
+		function createEditor() {
+			if ( editor1 )
+				return;
+
+			// Create a new editor instance inside the <div id="editor"> element,
+			// setting its value to html.
+			var config = {};
+			editor1 = CKEDITOR.appendTo( 'editor1', config, html );
+
+			// Update button states.
+			document.getElementById( 'remove' ).style.display = '';
+			document.getElementById( 'create' ).style.display = 'none';
+		}
+
+		function removeEditor() {
+			if ( !editor1 )
+				return;
+
+			// Retrieve the editor content. In an Ajax application this data would be
+			// sent to the server or used in any other way.
+			html = editor1.getData();
+
+			// Update <div> with "Edited Content".
+			document.getElementById( 'editorcontent1' ).innerHTML = html;
+			// Show <div> with "Edited Content".
+			document.getElementById( 'content1' ).style.display = '';
+			// Update button states.
+			document.getElementById( 'remove' ).style.display = 'none';
+			document.getElementById( 'create' ).style.display = '';
+
+			// Destroy the editor.
+			editor1.destroy();
+			editor1 = null;
+		}
+	</script>
+	<p>
+		<input onclick="createEditor();" type="button" value="Create Editor" id="create">
+		<input onclick="removeEditor();" type="button" value="Remove Editor" id="remove" style="display:none">
+	</p>
+	<div id="editor1">
+	</div>
+	<div id="content1" style="display: none">
+		<h3>Edited Content</h3>
+		<!-- This <div> will be used to display the editor content. -->
+		<div id="editorcontent1">
+		</div>
+	</div>
+</body>
+
+</html>

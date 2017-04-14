@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inline</title>
+	<script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+</head>
+<body>
+
+<div id="editor1" contenteditable="true">
+    <h1>Inline Editing in Action!</h1>
+    <p>The "div" element that contains this text is now editable.
+</div>
+<h2>Adding CKEditor to Your Page</h2>
+
+<p>To start, create a simple HTML page with a&nbsp;<code>&lt;textarea&gt;</code>&nbsp;element in it. You will then need to do two things:</p>
+
+<ol>
+	<li>Add a call to the CKEditor script in the&nbsp;<code>&lt;script&gt;</code>&nbsp;element of your page.</li>
+	<li>Use the&nbsp;<code><a href="http://docs.ckeditor.com/#!/api/CKEDITOR-method-replace">CKEDITOR.replace()</a></code>&nbsp;method to replace the existing&nbsp;<code>&lt;textarea&gt;</code>&nbsp;element with CKEditor.</li>
+</ol>
+
+<p>See the following example:</p>
+
+<pre>
+<code class="language-html">git clone https://github.com/ckeditor/ckeditor-docs-samples.git</code></pre>
+
+<p>When you are done, open your test page in the browser.</p>
+
+<p><strong>Congratulations! You have just installed and used CKEditor on your own page in virtually no time!</strong></p>
+
+
+<script>
+    // Turn off automatic editor creation first.
+    CKEDITOR.disableAutoInline = true;
+    CKEDITOR.inline( 'editor1' );
+</script>
+	
+</body>
+</html>

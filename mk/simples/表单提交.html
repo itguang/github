@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple example - Editor.md examples</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="../css/editormd.css" />
+        <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1>Simple example</h1>
+            </header>
+            <form action="http://localhost:8080/fckEditor/servlet/ResponseServlet" method="post">
+           <div class="editormd" id="test-editormd">
+                <textarea class="editormd-markdown-textarea" name="test-editormd-markdown-doc"></textarea>
+                <!-- 第二个隐藏文本域，用来构造生成的HTML代码，方便表单POST提交，这里的name可以任意取，后台接受时以这个name键为准 -->
+                <textarea class="editormd-html-textarea" name="editor"></textarea>
+            </div>
+            <div style="width:90%;margin: 10px auto;">
+                   用户名:<input type="text" name="username" style="padding: 5px;" />
+                    <input type="submit" name="submit" value="提交表单 Submit" style="padding: 5px;" /> 
+                </div> 
+                
+            </form>
+            <button id="btn1" >点击</button>  
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="../editormd.min.js"></script>
+        <script type="text/javascript">
+			var testEditor;
+            var text;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                     htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                   
+                    path    : "../lib/",
+
+                     saveHTMLToTextarea : true
+              
+
+                });
+                text = testEditor.getMarkdown();       // 获取 Markdown 源码
+              
+                        // 获取 Textarea 保存的 HTML 源码
+
+               // text =  testEditor.getPreviewedHTML();  // 获取预览窗口里的 HTML，在开启 watch 且没有开启 saveHTMLToTextarea 时使用
+                
+                /*
+                // or
+                testEditor = editormd({
+                    id      : "test-editormd",
+                    width   : "90%",
+                    height  : 640,
+                    path    : "../lib/"
+                });
+                */
+            });
+             // test = testEditor.getPreviewedHTML();  
+            var btn1 = document.getElementById("btn1");
+            btn1.addEventListener("click", function() {
+                alert(text);
+            });
+        </script>
+    </body>
+</html>

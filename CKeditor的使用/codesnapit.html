@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Using syntax highlighting</title>
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
+</head>
+
+<body>
+
+    <textarea action="http://localhost:8080/fckEditor/servlet/CKServlet" method="post" id="editor1" name="editor1" >
+&lt;p&gt;JavaScript code:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-javascript"&gt;var cow = new Mammal( "moo", {
+    legs: 4
+} );&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unknown markup:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt; ________________
+/                \
+| How about moo? |  ^__^
+\________________/  (oo)\_______
+                  \ (__)\       )\/\
+                        ||----w |
+                        ||     ||
+&lt;/code&gt;&lt;/pre&gt;
+    </textarea>
+
+    <script>
+        var config = {
+            extraPlugins: 'codesnippet',
+            codeSnippet_theme: 'github',//自定义主题: https://highlightjs.org/static/demo/
+            height: 356
+        };
+
+        CKEDITOR.replace( 'editor1', config );
+    </script>
+</body>
+
+</html>

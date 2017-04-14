@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fckEditor</title>
+
+
+	<script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+
+	<script src="js/sample.js"></script>
+
+</head>
+<body>
+	<textarea name="editor1" id="editor1" rows="10" cols="80">
+	你好
+	</textarea>
+	<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+       </script>
+       <button onclick="click">dianji</button>
+       <script>
+       window.onload=function(){
+       	var data = CKEDITOR.instances.editor1.getData();
+       	alert(data);
+
+    // Your code to save "data", usually through Ajax.
+    
+    
+       };
+            	
+</script>
+
+</body>
+</html>

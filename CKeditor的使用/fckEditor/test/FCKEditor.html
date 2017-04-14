@@ -1,0 +1,1323 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>FCKEditor</title></head><body><article class="markdown-body"><h1 id="_1"><a href="http://docs.ckeditor.com/#!/guide/dev_installation">官方文档</a></h1>
+<h1 id="simple"><a href="http://sdk.ckeditor.com/index.html">Simple官方例子</a></h1>
+<h1 id="ckeditor"><a name="user-content-ckeditor" href="#ckeditor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>什么是 CKEditor</h1>
+<blockquote>
+<p>CKEditor is an online WYSIWYG editor that is used to edit HTML documents (or their fragments) in the browser.</p>
+</blockquote>
+<p>在线的,所见即所得的,可以编辑html文档的,在浏览器的编辑器</p>
+<blockquote>
+<p>The &ldquo;edit HTML documents&rdquo; part means that the editor can be used to edit any HTML content, like website content (blog articles, blog comments, forum posts), e-mails, or things that you write in web forms. That is not all, however: CKEditor can also be used in all sorts of online applications, i.e. all those that use HTML as their source text format and are run in the browser!</p>
+</blockquote>
+<p>1.它的输出格式只有 .html</p>
+<p>2.它没有存储的功能.</p>
+<h2 id="use-utf-8"><a name="user-content-use-utf-8" href="#use-utf-8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Use UTF-8</h2>
+<p><code>To avoid problems with character encoding, use UTF-8 for your websites and your database. Just set the &lt;meta&gt; element for your pages to:</code><br />
+<pre><code class="xml">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+</code></pre><br />
+or, if you are using the HTML5 DOCTYPE, to:<br />
+<pre><code class="xml">&lt;meta charset=&quot;utf-8&quot;&gt;
+</code></pre></p>
+<h1 id="loading-ckeditor-scriptcheditor"><a href="http://docs.ckeditor.com/#!/guide/dev_ckeditor_js_load">Loading CKEditor Script(加载CHeditor 脚本)</a></h1>
+<p><code>CKEditor is a JavaScript application. To load it, you need to include a single file reference in your page. If you installed CKEditor in the ckeditor directory in the root of your website, you need to insert the following code fragment into the &lt;head&gt; section of your page:</code></p>
+<pre><code class="xml">&lt;head&gt;
+    ...
+    &lt;script src=&quot;/ckeditor/ckeditor.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+
+<h1 id="creating-editor-instancescheditor"><a name="user-content-creating-editor-instancescheditor" href="#creating-editor-instancescheditor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating Editor Instances(创建CHEDITOR实例)</h1>
+<h2 id="classic-editing"><a name="user-content-classic-editing" href="#classic-editing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Classic Editing(经典模式)</h2>
+<p><img alt="" src="http://docs.ckeditor.com/guides/dev_ckeditor_js_load/classic_example.png" /></p>
+<h3 id="creating-a-classic-editor-with-a-textarea"><a name="user-content-creating-a-classic-editor-with-a-textarea" href="#creating-a-classic-editor-with-a-textarea" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating a Classic Editor with a Textarea</h3>
+<p><code>In classic editing, CKEditor can work just like a &lt;textarea&gt; HTML element on your page. The editor offers a user interface to write, format, and work with rich text in a hassle-free manner, but the same content could be added (though not that easily) through a &lt;textarea&gt; element, requiring the user to type HTML code inside.</code></p>
+<p><code>As a matter of fact, in this scenario CKEditor uses the &lt;textarea&gt; element to transfer its data to the server. The &lt;textarea&gt; element is invisible to the end user. In order to create an editor instance using this approach, you must first add a &lt;textarea&gt; element to the source code of your HTML page:</code></p>
+<p>可以把CKEDITOR的内容输出到一个textarea 元素中去,这样可以便于使用表单提交数据到服务器</p>
+<p><pre><code class="xml">&lt;textarea name=&quot;editor1&quot; id=&quot;editor1&quot;&gt;&amp;lt;p&amp;gt;初始化editor内容.&amp;lt;/p&amp;gt;&lt;/textarea&gt;
+</code></pre><br />
+<code>Note that if you want to load data into the editor, for example from a database, you need to put that data inside the &lt;textarea&gt; element, just like the HTML-encoded &lt;p&gt; element in the example above. In this case the &lt;textarea&gt; element was named editor1. This name can be used in the server-side code later, when receiving the submitted data.</code></p>
+<p>译文: 注意如果你想加载数据到CKEDITOR 中,例如从数据库取数据放进去,你必须把数据放入一个 textarea 元素中去.</p>
+<p>把一个HTML元素替换为 CK 很简单, 只需要用一个 CK 的实例,调用replace()方法即可<br />
+<code>`js
+&lt;script&gt;
+    CKEDITOR.replace( 'editor1' );
+&lt;/script&gt;</code><br />
+<code>This script block must be included at any point after the &lt;textarea&gt; tag in the source code of the page. You can also call the CKEDITOR.replace method inside the &lt;head&gt; section, but in this case you will need to listen for the window.onload event:</code></p>
+<p>你也可以在 head 标签里面调用 CKEDITOR.replace() 方法,</p>
+<p>```js<br />
+<script><br />
+    window.onload = function() {<br />
+        CKEDITOR.replace( &lsquo;editor1&rsquo; );<br />
+    };<br />
+</script></p>
+<p>```</p>
+<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>完整例子</h3>
+<p>```html</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CKEditor Classic Editing Sample</title>
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    <form method="post">
+        <p>
+            My Editor:<br>
+            <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+            <script>
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</body>
+</html>
+
+<p>```</p>
+<h2 id="inline-editinginline"><a name="user-content-inline-editinginline" href="#inline-editinginline" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Inline Editing(Inline模式)</h2>
+<p><img alt="" src="http://docs.ckeditor.com/guides/dev_ckeditor_js_load/inline_example.png" /></p>
+<p><code>Inline Editing is a new technology introduced in CKEditor 4 that allows you to select any editable element on the page and edit it in-place. As a result, the editor can be used to edit content that looks just like the final page.</code></p>
+<p>它是一个真正的所见即所得的编辑体验,你所看到的就是最终要显示的结果</p>
+<p><code>html
+&lt;div id="editor1" contenteditable="true"&gt;
+    &lt;h1&gt;Inline Editing in Action!&lt;/h1&gt;
+    &lt;p&gt;The "div" element that contains this text is now editable.
+&lt;/div&gt;</code></p>
+<p>要使用 Inline 模式,很简单,只需要调用  CKEDITOR.inline 方法即可<br />
+<code>html
+&lt;div id="editor1" contenteditable="true"&gt;
+    &lt;h1&gt;Inline Editing in Action!&lt;/h1&gt;
+    &lt;p&gt;The "div" element that contains this text is now editable.
+&lt;/div&gt;
+&lt;script&gt;
+    // Turn off automatic editor creation first.
+    CKEDITOR.disableAutoInline = true;
+    CKEDITOR.inline( 'editor1' );
+&lt;/script&gt;</code><br />
+When you click inside the content of this <div> element, the CKEditor toolbar will appear.<br />
+当你点击div 这个元素的时候,CK将会出现</p>
+<h3 id="inline-editing-for-textarea"><a name="user-content-inline-editing-for-textarea" href="#inline-editing-for-textarea" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Inline Editing for Textarea</h3>
+<p><code>Since CKEditor 4.2 you can also turn &lt;textarea&gt; elements into inline editors. When you call the CKEDITOR.inline method on a &lt;textarea&gt;, an additional &lt;div&gt; element with inline editing enabled will replace the original &lt;textarea&gt;.</code></p>
+<h2 id="setting-ckeditor-configuration"><a href="http://docs.ckeditor.com/#!/guide/dev_configuration">Setting CKEditor Configuration</a></h2>
+<h1 id="ckeditorconfig"><a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config">CKEDITOR.config</a>(配置文件)</h1>
+<p>例如配置语言<br />
+<code>xml
+config.contentsLanguage = 'fr';</code></p>
+<h1 id="ckeditorapi"><a href="http://docs.ckeditor.com/#!/api/CKEDITOR">CKEDITOR</a>(API带有例子)</h1>
+<h2 id="defining-configuration-in-page"><a name="user-content-defining-configuration-in-page" href="#defining-configuration-in-page" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Defining Configuration In-Page</h2>
+<p>设置配置文件的最好的方式是在实例化 CK 的时候在页面中设置,这样的话,当你升级的时候不会出现问题</p>
+<blockquote>
+<p>In-page settings can be passed to any of the editor instance creation functions, namely CKEDITOR.replace and CKEDITOR.appendTo. For example:</p>
+</blockquote>
+<h3 id="1-ckeditorreplace-ckeditorappendto"><a name="user-content-1-ckeditorreplace-ckeditorappendto" href="#1-ckeditorreplace-ckeditorappendto" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.有两个方法可以用 CKEDITOR.replace  和  CKEDITOR.appendTo</h3>
+<p>```html<br />
+CKEDITOR.replace( &lsquo;editor1&rsquo;, {<br />
+    language: &lsquo;fr&rsquo;,<br />
+    uiColor: &lsquo;#9AB8F3&rsquo;<br />
+});<br />
+注意:配置文件的语法格式,{configuration name : configuration value}</p>
+<p>```</p>
+<h3 id="2using-the-configjs-fileconfigjs"><a name="user-content-2using-the-configjs-fileconfigjs" href="#2using-the-configjs-fileconfigjs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.Using the config.js File(用config.js来修改配置)</h3>
+<p>```html<br />
+CKEDITOR.editorConfig = function( config ) {<br />
+    config.language = &lsquo;fr&rsquo;;<br />
+    config.uiColor = &lsquo;#AADC6E&rsquo;;<br />
+};</p>
+<p><code>``</code>In order to apply the configuration settings, the CKEDITOR.editorConfig function must always be defined. The config.js file will be executed in the scope of your page, so you can also make references to variables defined in-page or even in other JavaScript files.`</p>
+<h3 id="3using-a-custom-configuration-file"><a name="user-content-3using-a-custom-configuration-file" href="#3using-a-custom-configuration-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.Using a Custom Configuration File(自定义配置文件)</h3>
+<p><code>Suppose you copied the config.js file to a folder named custom in the root of your website. You also renamed the file to ckeditor_config.js. At that point it is enough to only set the customConfig configuration option when creating the editor instances to use the customized settings defined in the file. For example:</code><br />
+<code>html
+CKEDITOR.replace( 'editor1', {
+    customConfig: '/custom/ckeditor_config.js'
+});
+The custom configuration file must look just like the default config.js file.</code></p>
+<h1 id="content-filtering-acf"><a name="user-content-content-filtering-acf" href="#content-filtering-acf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Content Filtering (ACF)</h1>
+<h1 id="getting-and-saving-data-in-ckeditorck"><a name="user-content-getting-and-saving-data-in-ckeditorck" href="#getting-and-saving-data-in-ckeditorck" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting and Saving Data in CKEditor(得到和保存CK的数据)</h1>
+<blockquote>
+<p>The CKEditor JavaScript API makes it easy to retrieve and control the data. Depending on your usage scenario(使用场景), the data can either be submitted to your server along with the parent <form> element or be used in Ajax applications where editor instances are created and destroyed dynamically.<br />
+</p>
+</blockquote>
+<h2 id="retrieving-data-from-ckeditor"><a name="user-content-retrieving-data-from-ckeditor" href="#retrieving-data-from-ckeditor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Retrieving Data from CKEditor(得到数据)</h2>
+<p>```html<br />
+<script><br />
+    var data = CKEDITOR.instances.editor1.getData();</p>
+<pre><code>// Your code to save "data", usually through Ajax.
+</code></pre>
+<p></script><br />
+```</p>
+<h2 id="saving-data-in-ckeditor-replacing-a-textarea"><a name="user-content-saving-data-in-ckeditor-replacing-a-textarea" href="#saving-data-in-ckeditor-replacing-a-textarea" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Saving Data in CKEditor Replacing a Textarea</h2>
+<p><code>When CKEditor functions as a replacement for a &lt;textarea&gt; element, the integration with the parent &lt;form&gt; element is automatic. CKEditor automatically updates the replaced &lt;textarea&gt; when the form is submitted, so there is no need to change any server-side code handling form submission after enabling CKEditor on an exisiting form element.</code></p>
+<p><code>This means that when submitting a form containing an editor instance, its data will simply be posted to the server, using the &lt;textarea&gt; element name as the key to retrieve it.</code></p>
+<p>当一个textares 绑定了CKEDITOR时,点击提交按钮时,CK会自动提交数据到textarea,向使用普通textarea一样提交form表单</p>
+<p><code>Please note that the replaced &lt;textarea&gt; element is updated automatically by CKEditor straight before submission. If you need to access the &lt;textarea&gt; value programatically with JavaScript (e.g. in the onsubmit handler to validate the entered data), there is a chance that the &lt;textarea&gt; element would still store the original data. In order to update the value of replaced &lt;textarea&gt; use the editor.updateElement() method.</code></p>
+<p><code>In rare cases it may happen that the server or application configuration will reject submitted HTML content if it is not encoded first (e.g. ASP.NET ValidateRequest). In such case check the config.htmlEncodeOutput option.</code><br />
+在极少情况下会出现服务端拒绝提交的form表单,检查 config.htmlEncodeOutput</p>
+<p><code>If you need to get the actual data from CKEditor at any moment using JavaScript, use the editor.getData() method as described above</code></p>
+<h3 id="observing-changes-in-ckeditor"><a name="user-content-observing-changes-in-ckeditor" href="#observing-changes-in-ckeditor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Observing Changes in CKEditor</h3>
+<p><strong>getData() returns CKEditor&rsquo;s HTML content.</strong><br />
+返回html内容</p>
+<p>```html<br />
+var editor = CKEDITOR.replace( &lsquo;editor1&rsquo; );</p>
+<p>// The &ldquo;change&rdquo; event is fired whenever a change is made in the editor.<br />
+editor.on( &lsquo;change&rsquo;, function( evt ) {<br />
+    // getData() returns CKEditor&rsquo;s HTML content.<br />
+    console.log( &lsquo;Total bytes: &lsquo; + evt.editor.getData().length );<br />
+});<br />
+```</p>
+<h1 id="example-ckeditor-setups"><a href="http://docs.ckeditor.com/#!/guide/dev_example_setups">Example CKEditor Setups</a></h1>
+<h2 id="ck"><a name="user-content-ck" href="#ck" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>配置CK 为编辑器(博客,文章,站点)</h2>
+<p>The Article Editor demo showcases an editor designed mainly for writing web text content like blog posts, articles etc.</p>
+<p>Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.</p>
+<h2 id="document-editor"><a name="user-content-document-editor" href="#document-editor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Document Editor</h2>
+<h3 id="developer-site-editor"><a name="user-content-developer-site-editor" href="#developer-site-editor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Developer Site Editor</h3>
+<p><img alt="" src="http://docs.ckeditor.com/guides/dev_example_setups/editor4.png" /></p>
+<h1 id="user-interface"><a name="user-content-user-interface" href="#user-interface" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>User Interface</h1>
+<h2 id="setting-editor-user-interface-color"><a name="user-content-setting-editor-user-interface-color" href="#setting-editor-user-interface-color" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting Editor User Interface Color</h2>
+<p><code>If you want to change the default UI color, you need to define the CKEDITOR.config.uiColor configuration setting which accepts an RGB color code.</code></p>
+<p><code>html
+config.uiColor = #66AB16;</code><br />
+<a href="http://sdk.ckeditor.com/samples/uicolor.html">Setting Editor UI Color&rdquo; sample </a><br />
+```html<br />
+&lt;!DOCTYPE html&gt;<br />
+<html></p>
+<p><head><br />
+    <meta charset="utf-8"><br />
+    <meta name="robots" content="noindex, nofollow"><br />
+    <title>Setting editor UI color</title><br />
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script><br />
+</head></p>
+<p><body></p>
+<pre><code>&lt;textarea cols="80" id="editor1" name="editor1" rows="10" &gt;&amp;lt;p&amp;gt;This is some &amp;lt;strong&amp;gt;sample text&amp;lt;/strong&amp;gt;. You are using &amp;lt;a href="http://ckeditor.com/"&amp;gt;CKEditor&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&lt;/textarea&gt;
+
+&lt;script&gt;
+    CKEDITOR.replace( 'editor1', {
+        uiColor: '#CCEAEE'
+    } );
+&lt;/script&gt;
+</code></pre>
+<p></body></p>
+<p></html><br />
+```</p>
+<h2 id="setting-editor-user-interface-language"><a name="user-content-setting-editor-user-interface-language" href="#setting-editor-user-interface-language" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting Editor User Interface Language</h2>
+<p><code>html
+config.defaultLanguage = 'de';</code></p>
+<h2 id="setting-editor-size"><a name="user-content-setting-editor-size" href="#setting-editor-size" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting Editor Size</h2>
+<p><strong>注意后面没有单位px</strong></p>
+<p>```html<br />
+config.width = 500;     // 500 pixels wide.<br />
+config.width = &lsquo;75%&rsquo;;   // CSS unit (percent).</p>
+<p>config.height = 500;        // 500 pixels high.<br />
+config.height = &lsquo;25em&rsquo;;     // CSS unit (em).</p>
+<p><code></code>html<br />
+&lt;!DOCTYPE html&gt;<br />
+<html></p>
+<p><head><br />
+    <meta charset="utf-8"><br />
+    <meta name="robots" content="noindex, nofollow"><br />
+    <title>Setting editor size</title><br />
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script><br />
+</head></p>
+<p><body></p>
+<pre><code>&lt;textarea cols="80" id="editor1" name="editor1" rows="10" &gt;&amp;lt;p&amp;gt;This is some &amp;lt;strong&amp;gt;sample text&amp;lt;/strong&amp;gt;. You are using &amp;lt;a href="http://ckeditor.com/"&amp;gt;CKEditor&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&lt;/textarea&gt;
+
+&lt;script&gt;
+    CKEDITOR.replace( 'editor1', {
+        width: '70%',
+        height: 500
+    } );
+&lt;/script&gt;
+</code></pre>
+<p></body></p>
+<p></html><br />
+```</p>
+<h2 id="automatic-editor-height-adjustment-to-content"><a name="user-content-automatic-editor-height-adjustment-to-content" href="#automatic-editor-height-adjustment-to-content" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Automatic Editor Height Adjustment to Content(自动调整高度度)</h2>
+<pre><code>The CKEDITOR.config.autoGrow_minHeight option defines the minimum height that the editor will always assume, no matter how much content it includes.
+
+The CKEDITOR.config.autoGrow_maxHeight option can be set in order to prevent the situation where huge amounts of content will cause the editor to expand infinitely.
+</code></pre>
+<p><code>html
+config.extraPlugins = 'autogrow';
+config.autoGrow_minHeight = 250;
+config.autoGrow_maxHeight = 600;</code></p>
+<p>```html<br />
+&lt;!DOCTYPE html&gt;<br />
+<html></p>
+<p><head><br />
+    <meta charset="utf-8"><br />
+    <meta name="robots" content="noindex, nofollow"><br />
+    <title>Automatic editor height adjustment to content</title><br />
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script><br />
+</head></p>
+<p><body></p>
+<pre><code>&lt;textarea cols="80" id="editor1" name="editor1" rows="10"&gt;      &amp;lt;p&amp;gt;This editor instance was configured to &amp;lt;strong&amp;gt;automatically adjust its height to content&amp;lt;/strong&amp;gt; that is added to it.&amp;lt;/p&amp;gt;      &amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Add some content here &amp;lt;/strong&amp;gt;to see &amp;lt;strong&amp;gt;how the editor expands&amp;lt;/strong&amp;gt; in order to fit it in.&amp;lt;/p&amp;gt;
+&lt;/textarea&gt;
+
+&lt;script&gt;
+    CKEDITOR.replace( 'editor1', {
+        extraPlugins: 'autogrow',
+        autoGrow_minHeight: 200,
+        autoGrow_maxHeight: 600,
+        autoGrow_bottomSpace: 50,
+        removePlugins: 'resize'
+    } );
+&lt;/script&gt;
+</code></pre>
+<p></body></p>
+<p></html><br />
+```</p>
+<h2 id="editor-resizing-customization"><a href="http://docs.ckeditor.com/#!/guide/dev_resize">Editor Resizing Customization</a>(编辑器的手动调整大小)</h2>
+<p>可以配置最小调整和最大调整大小</p>
+<p>也可以配置 水平还是竖直方向上调整</p>
+<h3 id="disabling-editor-resizing"><a name="user-content-disabling-editor-resizing" href="#disabling-editor-resizing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Disabling Editor Resizing</h3>
+<p><strong>To prevent the editor from being resized you can use the CKEDITOR.config.removePlugins setting to remove the Editor Resize (resize) plugin.</strong><br />
+<code>html
+config.removePlugins = 'resize';</code><br />
+<strong>You can also disable this feature by setting the CKEDITOR.config.resize_enabled configuration option to false.</strong><br />
+<code>html
+config.resize_enabled = false;</code></p>
+<p>```html<br />
+&lt;!DOCTYPE html&gt;<br />
+<html></p>
+<p><head><br />
+    <meta charset="utf-8"><br />
+    <meta name="robots" content="noindex, nofollow"><br />
+    <title>Editor resizing customization</title><br />
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script><br />
+</head></p>
+<p><body></p>
+<pre><code>&lt;/textarea&gt;
+
+&lt;script&gt;
+    CKEDITOR.replace( 'editor1', {
+        width: 600,
+        height: 300,
+        resize_dir: 'both',
+        resize_minWidth: 200,
+        resize_minHeight: 300,
+        resize_maxWidth: 800
+    } );
+&lt;/script&gt;
+</code></pre>
+<p></body></p>
+<p></html><br />
+```</p></article></body></html>
