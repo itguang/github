@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <short-name>sitcast</short-name>
+    <uri>http://www.itcast.cn/jsp/tag/simple</uri>
+    <tag><!-- 描述标签 -->
+		<description>Show Remote Address</description>
+        <name>showRemoteIp</name>
+		<tag-class>cn.itcast.stag.ShowRemoteIpSimpleTag</tag-class>
+		<body-content>empty</body-content><!-- 指示标签的主体内容：没有就写empty -->
+    </tag>
+    <tag>
+        <name>demo2</name>
+		<tag-class>cn.itcast.stag.Demo2SimpleTag</tag-class>
+		<body-content>scriptless</body-content>
+    </tag>
+     <tag>
+        <name>demo3</name>
+		<tag-class>cn.itcast.stag.Demo3SimpleTag</tag-class>
+		<body-content>empty</body-content>
+    </tag>
+    <tag>
+        <name>demo4</name>
+		<tag-class>cn.itcast.stag.Demo4SimpleTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>count</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue><!-- 默认是false -->
+		</attribute>
+    </tag>
+    <tag>
+        <name>demo5</name>
+		<tag-class>cn.itcast.stag.Demo5SimpleTag</tag-class>
+		<body-content>scriptless</body-content>
+    </tag>
+</taglib>

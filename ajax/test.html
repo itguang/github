@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJax</title>
+<style>
+	body, input, select, button, p {
+		font-size: 28px;
+		line-height:1.7;
+	}
+</style>
+</head>
+<body>
+	
+		用户名:<input id="username" type="text"  style="width:200px"><br/><br/>
+		密码  :  <input id="pwd" type="password" style="width:200px"><br/><br/>
+		<!-- <input type="button" value="登陆"><br/> -->
+		<button id="search">查询</button>
+
+		<p id="searchResult">123</p>
+
+		
+   
+		<script type="text/javascript">
+
+			document.getElementById("search").onclick = function() { 
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", "/servlet大作业/servlet/LoginServlet");
+				xmlhttp.send(null);
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState==4) {
+						if (xmlhttp.status==200) { 
+							document.getElementById("searchResult").innerHTML = "我执行了";
+						} else {
+							alert("发生错误：" + xmlhttp.status);
+						}
+					} 
+				};
+			};
+
+
+			/*document.getElementById("search").onclick=function  () {
+
+				var request = new XMLHttpRequest();
+				request.open("POST", "/servlet大作业/servlet/LoginServlet");
+				
+				var data = "username="+document.getElementById("username").value+"&pwd="+document.getElemenById("pwd").value;
+
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(data);
+				request.onreadystatechange = function () {
+					alert("我被点击了");
+					if (request.readyState===4) {
+						document.getElementById("createResult").innerHTML = request.responseText;
+						if (request.status===200) { 
+							document.getElementById("createResult").innerHTML = request.responseText;
+						} else {
+							alert("发生错误：" + request.status);
+						}
+					} else {
+						alert("发生错误：" + request.readyState);
+					}
+				};
+			};*/
+		</script>
+
+	
+
+</body>
+</html>
